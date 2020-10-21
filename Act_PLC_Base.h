@@ -1,18 +1,17 @@
 ﻿#ifndef ACT_PLC_BASE_H
 #define ACT_PLC_BASE_H
 
-#include"Act_Lib.h"
+#include <Act_Lib.h>
 
-class Act_PLC_Base
+class DLLFLAG Act_PLC_Base:Act_Lib
 {
-protected:
-    Act_Lib* lib;
 public:
     Act_PLC_Base();
+    virtual ~Act_PLC_Base();
     virtual int Connect();
     virtual int DisConnect();
 
-    virtual int Read(QString );
+    virtual int Read();
     virtual int Write();
 };
 
